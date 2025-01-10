@@ -1,0 +1,13 @@
+<html>
+<head>
+    <title>introduction to javascript</title>
+    </head>
+    <body>
+        <h1 id="heading"></h1>
+        <p id="para"></p>
+        <script>
+            document.getElementById("heading").innerHTML="Hi, I am Daneen";
+        </script>
+    </body>
+
+    
