@@ -20,3 +20,11 @@ elif units <= 100:
 elif units <= 200:
     amount = 130 + 162.50 + ((units - 100) * 5.26)
     surcharge = 45
+
+# Calculate and display the total electricity bill
+amount = float(input("Enter the electricity bill amount: "))
+surcharge = float(input("Enter the surcharge amount: "))
+
+total = amount + surcharge
+
+print("\nElectricity Bill = %.2f" % total)
