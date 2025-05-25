@@ -14,7 +14,6 @@ while running:
                 x -= 10
             elif event.key == pygame.K_LSHIFT:
                 x += 10
-                
     screen.fill((0, 0, 0))  # Clear screen
     pygame.draw.circle(screen, (255, 0, 0), (x, 150), 30)  
     pygame.display.flip()
