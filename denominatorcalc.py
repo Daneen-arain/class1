@@ -18,34 +18,28 @@ def calculate_denominations():
 
         result = f"2000 Notes: {note_2000}\n500 Notes: {note_500}\n100 Notes: {note_100}"
         if amount > 0:
-            result += f"\nRemaining ₹: {amount} (Can't be split)"
+            result += f"\nRemaining ₹: {amount} (Cannot be split)"
 
         result_label.config(text=result)
     except ValueError:
         result_label.config(text="Enter a valid number!")
 
+# GUI setup
 window = Tk()
 window.title("Denomination Calculator")
-window.geometry("350x450")
-window.config(bg="white")
+window.geometry("300x300")
+window.config(bg="#f0f0f0")
 
-img = Image.open("image.png")
-img = img.resize((300, 150))
-photo = ImageTk.PhotoImage(img)
-img_label = Label(window, image=photo, bg="white")
-img_label.pack(pady=10)
-
-label = Label(window, text="Enter Amount (₹):", font=("Arial", 12), bg="white")
-label.pack(pady=5)
+label = Label(window, text="Enter Amount (₹):", font=("Arial", 12), bg="#f0f0f0")
+label.pack(pady=10)
 
 entry_amount = Entry(window, font=("Arial", 12))
 entry_amount.pack(pady=5)
 
-calculate_button = Button(window, text="Calculate", command=calculate_denominations,
-                          font=("Arial", 12), bg="#4CAF50", fg="white")
+calculate_button = Button(window, text="Calculate", command=calculate_denominations, font=("Arial", 12), bg="#4CAF50", fg="white")
 calculate_button.pack(pady=10)
 
-result_label = Label(window, text="", font=("Arial", 12), bg="white")
-result_label.pack(pady=10)
+result_label = Label(window, text="", font=("Arial", 12), bg="#f0f0f0")
+result_label.pack(pady=20)
 
 window.mainloop()

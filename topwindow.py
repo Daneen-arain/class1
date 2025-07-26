@@ -4,14 +4,15 @@ root = Tk()
 root.title("Main Window")
 root.geometry("300x200")
 
-def open_new_window():
-    new_window = Toplevel(root)
-    new_window.title("Top Level Window")
-    new_window.geometry("200x150")
-    label = Label(new_window, text="This is a TopLevel window!")
-    label.pack(pady=20)
 
-btn = Button(root, text="Open Top Window", command=open_new_window)
-btn.pack(pady=60)
+def topwin():
+    top=Toplevel()
+    top.geometry("200x200")
+    top.title("toplevel")
+    L1=Label(top,text="this is my top level window")
+    L1.pack()
+    top.mainloop()
 
+btn=Button(root,text="click here",command=topwin)
+btn.pack()
 root.mainloop()
